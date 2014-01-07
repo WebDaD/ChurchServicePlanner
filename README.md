@@ -22,10 +22,11 @@ CSP is a webapp for your Church to plan your Services!
 - [ ] Module Events
 - [ ] Module EventRunDown
 - [ ] Module Locations
-- [ ] Module ServiceLeader
-- [ ] Module SermonSayer
+- [ ] Module ServiceManager
+- [ ] Module Preacher
+- [ ] Module Songs
 - [ ] Export to PDF
-- [ ] Mail to People
+- [ ] Notification Mail to People
 
 ## 3 (Pre-Release) YYYY-MM-DD:
 - [ ] Styling
@@ -43,23 +44,67 @@ CSP is a webapp for your Church to plan your Services!
 
 - + 2014-01-07: D: Filled Readme.md
 
-# ToDo
+# Modules
 
 ## Basic Framework
 - Fill
 
-## UserManagement
+## Module UserManagement
 - Fill
 
-## ChurchManagement
+## Module ChurchManagement
 - Fill
 
-## ModuleManagement
+## Module ModuleManagement
 - Fill
 
 ## Module MusicTeams
 - Table DEF
 - Forms DEF
+
+## Module Events
+- Table DEF
+- Forms DEF
+
+## Module Locations
+- Table DEF
+- Forms DEF
+
+## Module ServiceManager
+- Table DEF
+- Forms DEF
+
+## Module Preacher
+- Table DEF
+- Forms DEF
+
+## Module Songs
+- Table DEF
+- Forms DEF
+
+## Notifications
+
+People should get Note of Events, Changes, etc...
+But How?
+
+## Export
+
+There are a number of options to Export the Data
+
+### PDF
+Fill
+
+### SongBeamer
+Fill
+
+### OpenLP
+Fill
+
+### Google Drive
+Fill
+
+## REST
+Fill
 
 # Developers
 - D: @DSigmund
