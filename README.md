@@ -20,10 +20,10 @@ This is the SOurce-Code for the WebApp hosted @ WebDaD.eu
 
 ## 2 (Beta) YYYY-MM-DD:
 - [ ] Module Events
-- [ ] SubModule EventRunDown
 - [ ] Module Locations
 - [ ] Module ServiceManager
 - [ ] Module Preacher
+- [ ] Module Technicians
 - [ ] Module Songs
 - [ ] Export to PDF
 - [ ] Notification Mail to People
@@ -40,7 +40,7 @@ This is the SOurce-Code for the WebApp hosted @ WebDaD.eu
 ## 4 (Release) YYYY-MM-DD:
 - [ ] Connect to Google Drive (Save Data, Open Data)
 - [ ] .htaccess Mod_Rewrite to allow nice RESTing
-- 
+
 # Done
 
 - + 2014-01-07: D: Filled Readme.md
@@ -96,10 +96,30 @@ U allows to add/delete members
 
 
 ## Module Events
-TODO
+An Event is the MainUnit of the App.
+It may be a Service, a Concert, ...
+It Consists of MetaData and a RunDown.
 
-### SubModule EventRundown
-TODO
+RunDown-Items are having a TYPE, which changes the forms slightly
+TYPES:
+- Information
+- Song
+- Sermon
+- Intro
+- Outro
+- Other
+(More Types may be added as needed)
+
+Table:
+t_events: CHURCH_ID | ID(P) | EVENTDATETIME | NAME | DESCIRPTION | PREACHER_ID | SERVICEMANAGER_ID | MUSICTEAM_ID | LOCATION_ID
+t_event_has_techs: CHURCH_ID | EVENT_ID(P) | USER_ID(P)
+t_event_has_items: CHURCH_ID | EVENT_ID(P) | ID(P) | NAME | TYPE | DESCRIPTION | TYPE_DATA[maybe a attachment, songid, ...] | DURATION
+
+Forms:
+CRUD on events + edit rundown
+U = MetaData and adding of techs
+RunDown: CRUD Items
+
 
 ## Module Locations
 This Module holds all Locations, where a Service may be hold.
@@ -125,6 +145,15 @@ This MetaModule allows to set Users as Preachers.
 
 Table:
 t_preachers: CHURCH_ID | USER_ID(P)
+
+Forms:
+Add/Remove from List
+
+## Module Technicians
+This MetaModule allows to set Users as Technicians.
+
+Table:
+t_techs: CHURCH_ID | USER_ID(P)
 
 Forms:
 Add/Remove from List
@@ -155,7 +184,8 @@ There are a number of options to Export the Data
 Every Module may offer Data-Export as PDF.
 
 ### SongBeamer
-For a single Event, the Songs may be loaded as .sng-Files, the RunDown as .col-Files (with Songs and events/attachments). EveryThing will then be serves as zip-File
+For a single Event, the Songs may be loaded as .sng-Files, the RunDown as .col-Files (with Songs and events/attachments). EveryThing will then be serves as zip-File.
+Option will be if Songs Only or with Attachments and Data
 
 ### OpenLP
 TODO
